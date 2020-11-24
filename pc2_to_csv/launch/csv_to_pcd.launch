@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="custom_param_file" default="$(find pc2_to_csv)/param/csv_to_pcd_param.yaml"/>
+  <node name="csv_to_pcd" pkg="pc2_to_csv" type="csv_to_pcd" output="screen">
+    <rosparam file="$(arg custom_param_file)" command="load"/>
+  </node>
+
+</launch>
